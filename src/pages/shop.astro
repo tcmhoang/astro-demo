@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/default.astro";
 import ShopItems from "../components/ShopItems.astro";
+import { Cart } from "../components/cart";
 
 export const prerender = true;
 ---
@@ -19,6 +20,8 @@ export const prerender = true;
 
 	<div class="wrapper">
 		<ShopItems />
+
+		<Cart client:only="solid-js" />
 	</div>
 </Layout>
 

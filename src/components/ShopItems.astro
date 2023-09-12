@@ -1,5 +1,5 @@
 ---
-import { AddToCart } from "../components/AddToCard";
+import AddToCart from "./AddToCart.svelte";
 
 function formatCurrency(amount: number) {
 	return new Intl.NumberFormat("en-US", {
@@ -43,9 +43,6 @@ const { count = Infinity, addToCart = true } = Astro.props;
 					{addToCart ? (
 						<AddToCart
 							item={item}
-							addItemToCart={(i) =>
-								console.log(i)
-							}
 							client:only="svelte"
 						/>
 					) : null}
