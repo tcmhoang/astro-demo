@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/default.astro";
 import heroImage from "../assets/sandwich-hero.jpg";
-import { Image } from "astro:assets";
+import ShopItems from "../components/ShopItems.astro";
 ---
 
 <Layout>
@@ -15,12 +15,19 @@ import { Image } from "astro:assets";
 
 			<a href="/shop" class="big-link"> Shop Sandwich Kits</a>
 		</div>
+		<img
+			src={heroImage.src}
+			alt="A sandwich on a plate. This sandwich is a taco."
+			class="hero-image"
+		/>
 	</section>
-	<img
-		src={heroImage.src}
-		alt="A sandwich on a plate. This sandwich is a taco."
-		class="hero-image"
-	/>
+
+	<section class="block products">
+		<ShopItems count={3} addToCart={false} />
+		<p class="shop-link">
+			<a href="/shop">Shop All Sandwich Kits &rarr;</a>
+		</p>
+	</section>
 </Layout>
 
 <style>
