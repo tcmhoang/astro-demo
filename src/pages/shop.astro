@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/default.astro";
+import ShopItems from "../components/ShopItems.astro";
 
 export const prerender = true;
 ---
@@ -16,7 +17,9 @@ export const prerender = true;
 		</p>
 	</noscript>
 
-	<div class="wrapper"></div>
+	<div class="wrapper">
+		<ShopItems />
+	</div>
 </Layout>
 
 <style>
