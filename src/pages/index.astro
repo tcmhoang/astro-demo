@@ -1,18 +1,18 @@
 ---
 import Layout from "../layouts/default.astro";
 import heroImage from "../assets/sandwich-hero.jpg";
+import newsletterImage from "../assets/newsletter.jpg";
 import ShopItems from "../components/ShopItems.astro";
 ---
 
 <Layout>
 	<section class="block hero">
 		<div class="cta">
-			<h1>All Sandwiches, All the time.</h1>
+			<h1>All Sandwiches. All the time.</h1>
 			<p class="lede">
 				The world’s leading sandwich connoisseurs trust
 				sndwch.
 			</p>
-
 			<a href="/shop" class="big-link"> Shop Sandwich Kits</a>
 		</div>
 		<img
@@ -27,6 +27,21 @@ import ShopItems from "../components/ShopItems.astro";
 		<p class="shop-link">
 			<a href="/shop">Shop All Sandwich Kits &rarr;</a>
 		</p>
+	</section>
+
+	<section class="block newsletter">
+		<img
+			src={newsletterImage.src}
+			alt="a bag with the word “sndwch” superimposed on it"
+		/>
+		<div class="copy">
+			<h3>Prefer your sandwiches to go?</h3>
+			<p>
+				Get the sndwch newsletter to hear what else
+				qualifies as a sandwich first!
+			</p>
+			<a href="/newsletter" class="big-link">Subscribe</a>
+		</div>
 	</section>
 </Layout>
 
